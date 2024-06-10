@@ -1,0 +1,18 @@
+[build]
+  # Set environment variables if needed
+  # environment = { YOUR_VARIABLE = "value" }
+
+  # Specify the build command
+  command = "npm install && npm run build"  # This command installs node_modules and then runs the build script
+
+  # Set the directory to deploy
+  publish = "public"  # Change this to the directory where your built files are located
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"  # This plugin is specific to Next.js projects, adjust according to your project
+
+# Uncomment the lines below if you are using Next.js and have a next.config.js file
+# [[plugins]]
+#   package = "@netlify/plugin-nextjs"
+#   [plugins.inputs]
+#     distDir = ".next"
